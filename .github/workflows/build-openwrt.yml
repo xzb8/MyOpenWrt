@@ -60,6 +60,9 @@ jobs:
     - name: Add lienol source code
       run: cd openwrt && echo src-git lienol http://github.com/Lienol/openwrt-package >> feeds.conf.default
 
+    - name: Add lienol source code1
+      run: cd openwrt && echo src-git helloworld https://github.com/fw876/helloworld >> feeds.conf.default
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
